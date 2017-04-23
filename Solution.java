@@ -11,6 +11,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class Solution {
+//GPS coordinates of Koramangala office
 public static double LAT =  12.935076;
 public static double LONG =   77.614277;
 ArrayList<Customer> customerList = new ArrayList<Customer>();
@@ -22,7 +23,8 @@ ArrayList<Customer> customerList = new ArrayList<Customer>();
 		JSONArray a;
 		try 
 		{
-			a = (JSONArray) parser.parse(new FileReader("/home/vishal/workspace/collpoll/src/collpoll/customers.json"));
+			String datafile = "/home/vishal/workspace/collpoll/src/collpoll/customers.json";
+			a = (JSONArray) parser.parse(new FileReader(datafile));
 			for (Object o : a)
 			  {
 			    JSONObject person = (JSONObject) o;
